@@ -35,8 +35,99 @@
         <div class="prueba"></div>
     </nav>
 
-    <section id="container">
+    <!-- sección donde irán las noticias -->
+    <section id="container2">
+        <form  method="get" enctype="text/plain">
         
+            <!-- Contacto -->
+            <fieldset>
+                <legend>Informació de contacte</legend>
+                <div>
+                    <label>Nom:</label>
+                    <input name="nombre" type="text"/>
+                </div>
+                
+                <div>
+                    <label>Cognom:</label>
+                    <input name="apellido" type="text"/>
+                </div>
+                
+                <div>
+                <label>Email:</label>
+                <input type="email" name="email" id="email" required>
+                </div>
+                
+                <div class="direccion">
+                    <label class="diez">Adreça Postal:</label>
+                    <textarea name="direccionPostal" rows="15" cols="50"></textarea>
+                </div>
+            </fieldset>
+    
+            <!-- Curso -->
+            <fieldset>
+                <legend>Crèdits</legend>
+                <p>
+                    Selecciona el curs
+                </p>
+    
+                <div>
+                    <input type="checkbox" id="primero" name="primero" value="primero">
+                    <label for="primero">1er DAW</label>
+                    <br>
+                    <input type="checkbox" id="segundo" name="segundo" value="segundo">
+                    <label for="segundo">2on de DAW</label>
+                </div>
+            </fieldset>
+    
+            <!-- método de pago -->
+            <fieldset>
+                <legend>Mètode de pagament</legend>
+    
+                <div>
+                    <input type="radio" id="visa" name="metodoPago" value="visa">
+                    <label class="tarjeta" for="visa">Visa</label>
+                    <input type="radio" id="MasterCard" name="metodoPago" value="MasterCard">
+                    <label for="MasterCard">MasterCard</label>
+                </div>
+    
+                <div>
+                    <label class="datosTarjeta">Numero:</label>
+                    <input name="numero" type="text"/>
+                </div>
+            
+                <div>
+                    <label class="datosTarjeta">Caducitat:</label>
+                    <input class="tamFecha" name="Caducidad" type="date"/>
+                </div>
+            </fieldset>
+    
+            <!-- login -->
+            <fieldset>
+                <legend>Login</legend>
+    
+                <div>
+                    <label class="contraseña">Login:</label>
+                    <input name="login" type="text"/>
+                </div>
+    
+                <div>
+                    <label class="contraseña">Password (Max 10 Car):</label>
+                    <input class="diez" name="password" type="password" maxlength="10">
+                </div>
+    
+                <div>
+                    <label class="contraseña">Repetir Password (Max 10 Car):</label>
+                    <input class="diez" name="password" type="password" maxlength="10"/>
+                </div>
+            </fieldset>
+    
+            <!-- Botones de enviar o resetear el formulario -->
+            <div>
+                <br>
+                <input type="submit" name="botonEnviar" value="Enviar"/>
+                <input type="reset" name="botonReset" value="Reset"/>
+            </div>
+        </form>
 
     </section>
 

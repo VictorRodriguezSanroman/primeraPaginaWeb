@@ -173,16 +173,85 @@ p{
     border-left: 2px solid grey;
     position: relative;
 }
+#container3{
+    margin: auto;
+    width: 1098px;
+    height: 1100px;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+    position: relative;
+}
+
+/* formulario */
+
+form {
+    /* Centrar el formulario en la página */
+    margin: 0 auto;
+    width: 700px;
+  }
+  
+   .direccion{
+       /* Con esto centramos verticalmente la etiqueta de direccíon sobre el textarea */
+      display: flex;
+     align-items: center; 
+  }  
+  label {
+      /* Tamaño y alineación uniforme en todas las etiquetas label */
+      display: inline-block;
+      width: 100px;
+      height: 25px;
+      text-align: left; 
+    }
+    .tarjeta{
+        /* modificar ancho */
+      width: 35px;
+    }
+    .datosTarjeta{
+        /* modificar ancho */
+      width: 75px;
+    }
+    .contraseña{
+        /* modificar ancho sección login*/
+        width: 240px;
+    }
+    .diez{
+        /* modificar ancho label direccion y input contraseña */
+        width: 104px;
+    }
+    .tamFecha{
+        width: 172px;
+    }
 
 
+/* FOTOS */
 
-
-
-
-
-/* 
-#footer{
+#imagenes{
+    
+    width: 60%;
+    height: 400px;
+}
+.centrado{
+    text-align: center;
     width: 100%;
+    
+}
+.fotos{
+    float: left;
+    width:20%;
+    padding:22px;
+    margin: 5px;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0.1s;
+}
+
+.pruebasFotos{ 
+    text-align: center;
+    width:100%; 
+    
+    
+}
+.fotos:hover{/* Cuando el ratón pase sobre el coche se agrandará */
+    -webkit-transform:scale(3);
     background-color: #0c0b53;
-    height: 200px;
-} */
+    text-align: center;
+
+}
