@@ -72,6 +72,7 @@ ul{
     overflow: hidden;/*ocultamos todos los submenus*/
     width: 120px;
     /*tipo de transición, para height que dura 0,5segundos i de tipo ease*/
+    transition: height 0.5s ease;
     -webkit-transition: height 0.5s ease;/*  Google */
     /*Para el reesto de navegadores*/
     -moz-transition: height 0.5s ease; /* Firefox */
@@ -188,9 +189,10 @@ form {
     /* Centrar el formulario en la página */
     margin: 0 auto;
     width: 700px;
+    
   }
-  
-   .direccion{
+ 
+   .carta{
        /* Con esto centramos verticalmente la etiqueta de direccíon sobre el textarea */
       display: flex;
      align-items: center; 
@@ -199,27 +201,13 @@ form {
       /* Tamaño y alineación uniforme en todas las etiquetas label */
       display: inline-block;
       width: 100px;
-      height: 25px;
+      height: 40px;
       text-align: left; 
     }
-    .tarjeta{
-        /* modificar ancho */
-      width: 35px;
-    }
-    .datosTarjeta{
-        /* modificar ancho */
-      width: 75px;
-    }
-    .contraseña{
-        /* modificar ancho sección login*/
-        width: 240px;
-    }
-    .diez{
-        /* modificar ancho label direccion y input contraseña */
-        width: 104px;
-    }
-    .tamFecha{
-        width: 172px;
+
+    fieldset{
+        padding:10px;
+        background-color: rgba(28, 116, 199, 0.767);
     }
 
 
@@ -239,6 +227,7 @@ form {
     padding:22px;
     margin: 5px;
     /* Añadiendo algo de animaciones */
+    transition: -webkit-transform 1s ease-in-out 0.1s;
     -webkit-transition: -webkit-transform 1s ease-in-out 0.1s;
     -moz-transition: -webkit-transform 1s ease-in-out 0.1s;
     -o-transition: -webkit-transform 1s ease-in-out 0.1s;
@@ -252,6 +241,7 @@ form {
     
 }
 .fotos:hover{/* Cuando el ratón pase sobre las imágenes estas se agrandarán */
+    transform:scale(3);
     -webkit-transform:scale(3);
     -ms-transform:scale(3);
     -o-transform:scale(3);
@@ -291,25 +281,25 @@ table,th, td, tr{
     padding:5px;
     border-collapse: collapse;
 }
-#tabla1,#tabla2,  .tablaCalendario{
+#tabla1,#tabla2,  .tablaCalendario, .titulosPagina{
     text-align: center;
     
 }
 
-#tabla1 > h2,#tabla2 > h2,  .tablaCalendario > h2{
+#tabla1 > h2,#tabla2 > h2,  .tablaCalendario > h2, .titulosPagina {
     padding:20px;
 }
 .nombre{
     width:300px;
 }
 
-tbody tr:nth-child(even) {
+table tr:nth-child(even) {
 
     background-color: #eee;
 
     }
 
- tbody tr:nth-child(odd) {
+ table tr:nth-child(odd) {
 
     background-color:#9ab5ff;
 

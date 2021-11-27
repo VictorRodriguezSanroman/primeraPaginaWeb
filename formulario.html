@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La tirada digital</title>
     <link rel="stylesheet" href="estilos/style.css" type="text/css"/>
+    <script src="js/validacion.js" type="text/javascript"></script>
 </head>
 <body>
     <!-- Cabecera donde va el título -->
@@ -37,89 +38,42 @@
 
     <!-- sección donde irán las noticias -->
     <section id="container2">
-        <form  method="get" enctype="text/plain">
+        <h2 class = "titulosPagina">Cartas al director</h2>
+        <form  method="get" enctype="text/plain" id="cartas" autocomplete="off"><!-- Con este atributo evitamos el autocompletado del formulario -->
         
             <!-- Contacto -->
             <fieldset>
-                <legend>Informació de contacte</legend>
+                <legend>Información de contacto</legend>
                 <div>
-                    <label>Nom:</label>
-                    <input name="nombre" type="text"/>
+                    <label>Nombre:</label>
+                    <input name="nombre" type="text" id="nombre" maxlength="10"/><!--El nombre no debe tener más de 10 caractéres-->
                 </div>
                 
                 <div>
-                    <label>Cognom:</label>
-                    <input name="apellido" type="text"/>
+                    <label>Apellidos:</label>
+                    <input name="apellido" id="apellido" type="text" maxlength="20"/><!--Los apellidos no debe tener más de 20 caractéres-->
+                </div>
+                <div>
+                    <label>Edad:</label>
+                    <input name="edad" type="number" min=18 max=90/> <!-- la edad debe estar entre 18 y 90 años -->
                 </div>
                 
+                <div>
+                    <label>Dirección:</label>
+                    <input  name="adress" type="text"/>
+                </div>
                 <div>
                 <label>Email:</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" required><!-- email con el atributo requerido -->
                 </div>
                 
-                <div class="direccion">
-                    <label class="diez">Adreça Postal:</label>
-                    <textarea name="direccionPostal" rows="15" cols="50"></textarea>
+                <div class="carta">
+                    <label class="diez">Carta: </label>
+                    <textarea name="direccionPostal" rows="15" cols="70" placeholder="Escribe aquí tu carta al direcctor..."></textarea><!-- Con el atributo placeholder escribo un texto predefinido dentro del textarea -->
                 </div>
+                <br>
             </fieldset>
     
-            <!-- Curso -->
-            <fieldset>
-                <legend>Crèdits</legend>
-                <p>
-                    Selecciona el curs
-                </p>
-    
-                <div>
-                    <input type="checkbox" id="primero" name="primero" value="primero">
-                    <label for="primero">1er DAW</label>
-                    <br>
-                    <input type="checkbox" id="segundo" name="segundo" value="segundo">
-                    <label for="segundo">2on de DAW</label>
-                </div>
-            </fieldset>
-    
-            <!-- método de pago -->
-            <fieldset>
-                <legend>Mètode de pagament</legend>
-    
-                <div>
-                    <input type="radio" id="visa" name="metodoPago" value="visa">
-                    <label class="tarjeta" for="visa">Visa</label>
-                    <input type="radio" id="MasterCard" name="metodoPago" value="MasterCard">
-                    <label for="MasterCard">MasterCard</label>
-                </div>
-    
-                <div>
-                    <label class="datosTarjeta">Numero:</label>
-                    <input name="numero" type="text"/>
-                </div>
-            
-                <div>
-                    <label class="datosTarjeta">Caducitat:</label>
-                    <input class="tamFecha" name="Caducidad" type="date"/>
-                </div>
-            </fieldset>
-    
-            <!-- login -->
-            <fieldset>
-                <legend>Login</legend>
-    
-                <div>
-                    <label class="contraseña">Login:</label>
-                    <input name="login" type="text"/>
-                </div>
-    
-                <div>
-                    <label class="contraseña">Password (Max 10 Car):</label>
-                    <input class="diez" name="password" type="password" maxlength="10">
-                </div>
-    
-                <div>
-                    <label class="contraseña">Repetir Password (Max 10 Car):</label>
-                    <input class="diez" name="password" type="password" maxlength="10"/>
-                </div>
-            </fieldset>
     
             <!-- Botones de enviar o resetear el formulario -->
             <div>
@@ -127,6 +81,7 @@
                 <input type="submit" name="botonEnviar" value="Enviar"/>
                 <input type="reset" name="botonReset" value="Reset"/>
             </div>
+            <br>
         </form>
 
     </section>
